@@ -1,0 +1,70 @@
+INSERT INTO users (name, email, password)
+ VALUES ('Eva Stanley', 'sebatiangueeray@gmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+ ('Louisa Meyer', 'jacksonrose@hotmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+ ('Dominic Parks', 'victoriablackwell@gmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+ ('Sue Luna', 'jasonvincent@gmx.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+ ('Rosalie Garza', 'charlielevy@yahoo.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+ ('Etta West', 'makaylaweiss@icloud.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
+
+INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code, active) 
+VALUES (3, 'Synergized', 'description', 'http://dummyimage.com/188x137.jpg/ff4444/ffffff', 'http://dummyimage.com/213x117.bmp/ff4444/ffffff', 1067, 4, 2, 2, 'Philippines', 'Linden', 'Napalitan', null, '9006', true),
+(2, 'optimal', 'description', 'http://dummyimage.com/194x170.png/cc0000/ffffff', 'http://dummyimage.com/174x128.bmp/5fa2dd/ffffff', 881, 1, 3, 2, 'Portugal', 'Cambridge', 'Sever do Vouga', 'Aveiro', '3740-251', false),
+(5, 'upward-trending', 'description', 'http://dummyimage.com/223x185.png/5fa2dd/ffffff', 'http://dummyimage.com/176x170.bmp/5fa2dd/ffffff', 748, 0, 7, 5, 'Poland', 'Almo', 'Kosakowo', null, '81-198', true),
+(6, 'exuding', 'description', 'http://dummyimage.com/202x247.bmp/cc0000/ffffff', 'http://dummyimage.com/162x227.jpg/cc0000/ffffff', 1672, 1, 7, 4, 'Nigeria', 'Hoffman', 'Dutsin Ma', null, null, true),
+(1, 'national', 'description', 'http://dummyimage.com/135x153.bmp/5fa2dd/ffffff', 'http://dummyimage.com/144x204.png/5fa2dd/ffffff', 1645, 4, 4, 0, 'Croatia', 'Merrick', 'Vodnjan', null, '52215', true),
+(3, 'clear-thinking', 'description', 'http://dummyimage.com/165x192.jpg/dddddd/000000', 'http://dummyimage.com/203x107.bmp/dddddd/000000', 503, 0, 4, 4, 'Morocco', 'Dottie', 'Tissa', null, null, false),
+(5, 'algorithm', 'description', 'http://dummyimage.com/230x138.bmp/cc0000/ffffff', 'http://dummyimage.com/179x102.bmp/ff4444/ffffff', 448, 2, 7, 7, 'Brazil', 'Saint Paul', 'Mogi Mirim', null, '13800-000', false),
+(6, 'Realigned', 'description', 'http://dummyimage.com/194x106.jpg/5fa2dd/ffffff', 'http://dummyimage.com/138x164.jpg/cc0000/ffffff', 1450, 2, 3, 5, 'Portugal', 'Briar Crest', 'Cabouco', 'Ilha de São Miguel', '9560-305', false),
+(2, 'Diverse', 'description', 'http://dummyimage.com/238x196.jpg/5fa2dd/ffffff', 'http://dummyimage.com/105x197.bmp/dddddd/000000', 1684, 3, 7, 1, 'Indonesia', 'Shoshone', 'Ladoang', null, null, true),
+(3, 'website', 'description', 'http://dummyimage.com/210x190.jpg/cc0000/ffffff', 'http://dummyimage.com/163x166.jpg/cc0000/ffffff', 1274, 1, 7, 4, 'France', '1st', 'Tours', 'Centre', '37072 CEDEX 2', false),
+(5, 'logistical', 'description', 'http://dummyimage.com/154x169.bmp/cc0000/ffffff', 'http://dummyimage.com/120x103.bmp/dddddd/000000', 239, 1, 4, 10, 'Philippines', 'Cordelia', 'Lilio', null, '4004', false),
+(3, 'context-sensitive', 'description', 'http://dummyimage.com/154x162.jpg/cc0000/ffffff', 'http://dummyimage.com/106x147.png/ff4444/ffffff', 1618, 3, 1, 9, 'China', 'Twin Pines', 'Wutan', null, null, false),
+(3, 'system engine', 'description', 'http://dummyimage.com/228x188.png/5fa2dd/ffffff', 'http://dummyimage.com/120x146.jpg/5fa2dd/ffffff', 1464, 1, 3, 8, 'Ukraine', 'Almo', 'Svitlovods’k', null, null, true),
+(6, 'Open-source', 'description', 'http://dummyimage.com/198x152.bmp/dddddd/000000', 'http://dummyimage.com/245x228.bmp/ff4444/ffffff', 1387, 1, 7, 1, 'China', 'Claremont', 'Zhujiang', null, null, true),
+(5, 'Front-line', 'description', 'http://dummyimage.com/250x190.jpg/ff4444/ffffff', 'http://dummyimage.com/184x235.bmp/dddddd/000000', 1530, 1, 1, 4, 'France', 'Corscot', 'Paris 06', 'Île-de-France', '75270 CEDEX 06', false),
+(5, 'structure', 'description', 'http://dummyimage.com/213x220.png/dddddd/000000', 'http://dummyimage.com/110x117.png/cc0000/ffffff', 1437, 2, 7, 5, 'Japan', 'Quincy', 'Narutō', null, '289-1343', false),
+(5, 'local', 'description', 'http://dummyimage.com/161x240.jpg/dddddd/000000', 'http://dummyimage.com/227x124.jpg/cc0000/ffffff', 1383, 4, 3, 3, 'Poland', 'Moulton', 'Gniezno', null, '62-210', true),
+(4, 'Profound', 'description', 'http://dummyimage.com/227x207.jpg/5fa2dd/ffffff', 'http://dummyimage.com/161x180.bmp/cc0000/ffffff', 608, 1, 7, 5, 'Malawi', 'Cottonwood', 'Nkhotakota', null, null, true),
+(1, 'moderator', 'description', 'http://dummyimage.com/239x146.bmp/5fa2dd/ffffff', 'http://dummyimage.com/196x245.png/5fa2dd/ffffff', 1136, 3, 7, 1, 'Ukraine', 'Daystar', 'Klenovyy', null, null, true),
+(3, 'Profit-focused', 'description', 'http://dummyimage.com/171x200.png/ff4444/ffffff', 'http://dummyimage.com/190x168.jpg/ff4444/ffffff', 1260, 0, 8, 11, 'China', 'Butterfield', 'Lengshuijing', null, null, false),
+(3, 'Persistent', 'description', 'http://dummyimage.com/171x224.bmp/ff4444/ffffff', 'http://dummyimage.com/246x206.bmp/cc0000/ffffff', 1712, 3, 1, 11, 'Philippines', 'Sugar', 'Kolambugan', null, '2100', true),
+(1, 'Extended', 'description', 'http://dummyimage.com/215x217.bmp/5fa2dd/ffffff', 'http://dummyimage.com/122x238.jpg/cc0000/ffffff', 329, 2, 3, 4, 'South Korea', 'Donald', 'Munsan', null, null, false),
+(3, 'Distributed', 'description', 'http://dummyimage.com/166x168.png/5fa2dd/ffffff', 'http://dummyimage.com/197x164.bmp/dddddd/000000', 1579, 4, 1, 8, 'Philippines', 'Kingsford', 'Napalitan', null, '9006', true),
+(4, 'asymmetric', 'description', 'http://dummyimage.com/249x223.bmp/5fa2dd/ffffff', 'http://dummyimage.com/164x227.png/cc0000/ffffff', 504, 3, 5, 2, 'Indonesia', 'Twin Pines', 'Cidima', null, null, true),
+(4, 'Programmable', 'description', 'http://dummyimage.com/210x199.png/5fa2dd/ffffff', 'http://dummyimage.com/196x217.png/cc0000/ffffff', 1191, 2, 7, 3, 'Guatemala', 'Lotheville', 'Santa Cruz Balanyá', null, '04015', false);
+
+
+INSERT INTO reservations (start_date, end_date, property_id, guest_id) 
+values ('1/9/2020', '6/11/2020', 14, 1),
+('3/19/2020', '1/15/2020', 23, 5),
+('12/24/2019', '5/6/2020', 7, 1),
+('2/24/2020', '2/13/2020', 11, 1),
+('11/16/2019', '8/5/2019', 22, 4),
+('3/15/2020', '3/24/2020', 13, 5),
+('5/24/2020', '5/17/2020', 22, 1),
+('8/13/2019', '8/17/2019', 6, 5),
+('11/26/2019', '1/23/2020', 12, 5),
+('5/24/2020', '4/12/2020', 25, 4),
+('6/3/2020', '12/25/2019', 18, 5),
+('5/4/2020', '2/6/2020', 9, 1),
+('1/12/2020', '5/13/2020', 20, 3),
+('5/8/2020', '2/10/2020', 22, 4),
+('9/7/2019', '7/6/2020', 22, 2);
+
+
+INSERT INTO property_reviews (guest_id, property_id, reservation_id, rating, message)
+VALUES (1, 2, 4, 4, 'Morbi porttitor lorem id ligula.'),
+(4, 6, 2, 0, 'Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'),
+(5, 8, 14, 4, 'Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.'),
+(1, 17, 1, 5, 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'),
+(4, 1, 5, 0, 'Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.'),
+(5, 5, 9, 1, 'Integer a nibh.'),
+(3, 21, 9, 1, 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.'),
+(4, 1, 12, 5, 'Ut tellus.'),
+(5, 1, 2, 3, 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.'),
+(2, 24, 4, 2, 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.'),
+(3, 7, 6, 4, 'Suspendisse ornare consequat lectus.'),
+(3, 5, 6, 1, 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim.'),
+(3, 2, 1, 1, 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.'),
+(2, 1, 15, 4, 'Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum.'),
+(6, 19, 8, 3, 'Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem.');
