@@ -53,12 +53,6 @@ const addUser = function (user) {
   const values = [user.name, user.email, user.password]
   return pool.query(queryString, values)
     .then(res => res.rows[0])
-
-
-  const userId = Object.keys(users).length + 1;
-  user.id = userId;
-  users[userId] = user;
-  return Promise.resolve(user);
 }
 exports.addUser = addUser;
 
