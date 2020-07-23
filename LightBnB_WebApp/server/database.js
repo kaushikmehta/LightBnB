@@ -93,18 +93,8 @@ exports.getAllReservations = getAllReservations;
  * @return {Promise<[{}]>}  A promise to the properties.
  */
 
-// {
-//   city,
-//   owner_id,
-//   minimum_price_per_night,
-//   maximum_price_per_night,
-//   minimum_rating
-// }
-
-
 const getAllProperties = function (options, limit = 10) {
-
-  let queryParams = [];
+  const queryParams = [];
   let queryString = `SELECT properties.*, AVG(rating) as average_rating
   FROM properties
   JOIN property_reviews 
@@ -112,13 +102,12 @@ const getAllProperties = function (options, limit = 10) {
   `;
 
   if (options.city) {
-    queryParams.push(`%${options.city}%`);
+    queryParams.push(`%${options.city}%`); // [city]
     queryString += `WHERE city LIKE $${queryParams.length} `;
   }
 
   queryString += `GROUP BY properties.id
   `;
-
 
   if (options.minimum_rating) {
     queryParams.push(options.minimum_rating);
@@ -161,15 +150,11 @@ const getAllProperties = function (options, limit = 10) {
   ORDER BY cost_per_night
   LIMIT $${queryParams.length};
   `;
-
-  console.log(queryParams, queryString);
-
+  // console.log(queryParams, queryString)
   return pool.query(queryString, queryParams)
     .then(res => res.rows)
 
 }
-
-
 
 exports.getAllProperties = getAllProperties;
 
@@ -180,42 +165,38 @@ exports.getAllProperties = getAllProperties;
  * @return {Promise<{}>} A promise to the property.
  */
 const addProperty = function (property) {
-  const propertyId = Object.keys(properties).length + 1;
-  property.id = propertyId;
-  properties[propertyId] = property;
-  return Promise.resolve(property);
-}
-exports.addProperty = addProperty;
+  return pool
+    .query(
+      `
+  INSERT INTO properties
+  (owner_id, title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING *;
+  `,
+      [
+        property.owner_id,
+        property.title,
+        property.description,
+        property.thumbnail_photo_url,
+        property.cover_photo_url,
+        property.cost_per_night,
+        property.parking_spaces,
+        property.number_of_bathroom,
+        property.number_of_bedrooms,
+        property.country,
+        property.street,
+        property.city,
+        property.province,
+        property.post_code,
+      ]
+    )
+    .then((res) => res.rows)
+    .catch((err) => console.error("query error", err.stack));
+};
+  exports.addProperty = addProperty;
+  
+  
+  // const propertyId = Object.keys(properties).length + 1;
+  // property.id = propertyId;
+  // properties[propertyId] = property;
+  // return Promise.resolve(property);
 
-
-
-
-// if (options.minimun_rating) {
-//   if(options.minimum_price){
-//     if(options.maximum_price){
-//       queryParams.push(options.minimun_rating);
-//       queryParams.push(options.minimum_price);
-//       queryParams.push(options.maximum_price);
-//       queryString += `HAVING AVG(rating) > $${queryParams.length - 2} AND cost_per_night > $${queryParams.length - 1} AND cost_per_night < $${queryParams.length}`;
-//     } else{
-//       queryParams.push(options.minimun_rating);
-//       queryParams.push(options.minimum_price);
-//       queryString += `HAVING AVG(rating) > $${queryParams.length - 1} AND cost_per_night > $${queryParams.length}`
-//     }
-//   } else {
-//     queryParams.push(options.minimun_rating);
-//     queryString += `HAVING AVG(rating) > $${queryParams.length}`
-//   }
-// } else if (options.minimum_price){
-//   if(options.maximum_price){
-//     queryParams.push(options.minimum_price);
-//     queryParams.push(options.maximum_price);
-//     queryString += `HAVING cost_per_night > $${queryParams.length - 1} AND cost_per_night < $${queryParams.length}`;
-//   } else {
-//     queryParams.push(options.minimum_price);
-//     queryString += `HAVING cost_per_night > $${queryParams.length}`;
-//   }
-
-// } else if(options.maximum_price){
-//   queryString += `HAVING cost_per_night < $${queryParams.length}`;
-// }
+  
